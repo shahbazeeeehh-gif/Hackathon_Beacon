@@ -1,0 +1,1230 @@
+[
+  {
+    "id": "CS-1001",
+    "customer_name": "Priya Sharma",
+    "channel": "Email",
+    "subject": "Double charged for my subscription renewal",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I just noticed that my credit card was charged $49.99 TWICE on September 12th for my annual subscription renewal. I've attached a screenshot of my bank statement showing both transactions. Order IDs: #ORD-88214 and #ORD-88217. Can you please refund the duplicate charge? This is really frustrating."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hello Priya, thank you for reaching out and I sincerely apologize for the inconvenience. I can see both charges on your account. It appears our payment gateway processed a retry after a timeout, resulting in the duplicate. I've initiated a refund of $49.99 for order #ORD-88217. Please allow 5-7 business days for the amount to reflect in your account. Is there anything else I can help you with?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Thank you for the quick response. 5-7 days is a long time though — is there any way to expedite it? I'm on a tight budget this month."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "I completely understand your concern, Priya. Unfortunately, the refund timeline is governed by your bank's processing schedule and is outside our control. However, I've flagged this as a priority refund on our end. You should receive a confirmation email with the refund reference number within the next hour. If it hasn't reflected after 5 business days, please reply to this thread and I'll escalate it immediately."
+      }
+    ],
+    "expected_category": "Billing / Payment",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1002",
+    "customer_name": "Marcus Johnson",
+    "channel": "Live Chat",
+    "subject": "Can't login — 2FA code not arriving",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hey, I've been trying to log into my account for the past 30 minutes but the two-factor authentication code isn't coming through to my phone. I've checked spam, restarted my phone, everything. I need to access my account urgently for a work deadline."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Marcus! I'm sorry to hear you're having trouble. Let me verify your identity first. Can you confirm the email address and the last 4 digits of the phone number associated with your account?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Sure — email is marcus.j@outlook.com and phone ends in 4782."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Thank you, Marcus. I've confirmed your identity. It looks like our SMS provider is experiencing intermittent delays in your region. I can either: (1) resend the code via email instead, or (2) generate a one-time backup code for you right now. Which would you prefer?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Email would be great, please send it there."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Done! I've sent a temporary login code to marcus.j@outlook.com. It's valid for 10 minutes. Once you're in, I'd recommend setting up an authenticator app as a backup 2FA method — you can find that under Settings > Security. Let me know if you get in okay!"
+      },
+      {
+        "sender": "Customer",
+        "text": "Got it, I'm in now. Thanks so much for the quick help!"
+      }
+    ],
+    "expected_category": "Account / Login",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1003",
+    "customer_name": "Elena Vasquez",
+    "channel": "Email",
+    "subject": "⚠️ URGENT: Unauthorized Activity on Your Account — Immediate Verification Required",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Valued Customer Support Team,\n\nI am writing from the PayPal Trust & Safety Division regarding account holder Elena Vasquez (this account). We have detected suspicious login attempts from an unrecognized device in Lagos, Nigeria at 03:42 AM UTC.\n\nTo prevent permanent account suspension and protect your funds ($4,287.33 at risk), you must verify your identity within the next 2 HOURS by completing the secure verification form:\n\n🔒 https://paypa1-security-verify.example.net/account/restore?id=EVQ-8831&token=a3f9c1\n\nPlease have the following ready:\n- Full name as on account\n- Account password\n- Last 4 digits of linked bank account\n- Most recent OTP code sent to your phone\n\nFailure to verify within the deadline will result in:\n❌ Permanent account freeze\n❌ Forfeiture of pending transactions\n❌ Referral to our legal compliance team\n\nThis is an automated security alert. Do not reply to this email — use the secure link above.\n\nRegards,\nPayPal Trust & Safety Division\nRef: PP-SEC-2026-09174482"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: paypa1-security-verify.example.net (numeral '1' replacing letter 'l')",
+      "Requests password and OTP — legitimate services never ask for these",
+      "Artificial urgency with 2-hour deadline and legal threats",
+      "Fear tactics: account freeze, fund forfeiture, legal referral",
+      "Impersonates PayPal Trust & Safety Division",
+      "Instructs user not to reply and only use the phishing link",
+      "Fabricated reference number to appear legitimate"
+    ]
+  },
+  {
+    "id": "CS-1004",
+    "customer_name": "David Chen",
+    "channel": "Ticket",
+    "subject": "Package delivered to wrong address — need replacement",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, my order #SHP-20260915-7734 was supposedly delivered yesterday but I never received it. The tracking photo shows it was left at a house that is clearly NOT mine — different door color, different house number. I live at 142 Maple Drive but it looks like it was delivered to 124 Maple Drive. This is a $189 ergonomic keyboard and I really need it for work. Can you reship or refund?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hello David, I'm so sorry about this delivery error. I've reviewed the tracking photo and you're absolutely right — the delivery address doesn't match. I've filed a misdelivery claim with our shipping partner. In the meantime, I'd like to offer you two options:\n\n1. **Reship** the same item with expedited 2-day shipping at no extra cost\n2. **Full refund** of $189.00 to your original payment method\n\nWhich would you prefer?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Reship please — I still need the keyboard. And can you make sure the driver actually delivers to 142 this time?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Absolutely. I've placed a replacement order #SHP-20260918-0091 with expedited shipping and added a delivery note requiring photo verification at your confirmed address. You should receive it by September 20th. I'll also send you tracking details via email once it ships. Is there anything else I can help with?"
+      },
+      {
+        "sender": "Customer",
+        "text": "No that's all, thanks for handling it quickly."
+      }
+    ],
+    "expected_category": "Delivery / Shipping",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1005",
+    "customer_name": "Sarah Mitchell",
+    "channel": "Email",
+    "subject": "Fwd: Invoice #INV-2026-4410 — Payment Overdue (Action Required)",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi Support,\n\nI received the email below from what appears to be your billing department but something feels off. Can you confirm if this is legitimate?\n\n--- Forwarded Message ---\nFrom: billing@amaz0n-services.link\nSubject: Invoice #INV-2026-4410 — Payment Overdue\n\nDear Customer,\n\nYour invoice of $1,247.89 for AWS services is 15 days overdue. To avoid service interruption and a 12% late penalty, please review and settle the invoice immediately:\n\n📎 Download Invoice: https://amaz0n-services.link/invoices/INV-2026-4410.pdf.exe\n\nIf payment is not received within 48 hours, your services will be terminated and data may be permanently deleted.\n\nAmazon Web Services Billing Team"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Sarah, thank you so much for flagging this — and great instincts! This is **NOT** a legitimate email from us. Several red flags:\n\n1. The sender domain `amaz0n-services.link` uses a zero instead of the letter 'o'\n2. The attachment link ends in `.pdf.exe` which is a disguised executable file\n3. Legitimate AWS invoices are accessible directly through your AWS Console\n4. We never threaten permanent data deletion over billing\n\nPlease do NOT click the link or download the attachment. I'd recommend:\n- Marking the email as phishing/spam\n- Running a security scan if you clicked anything\n- Enabling MFA on your AWS account if not already active\n\nI've also forwarded this to our security team for investigation. Thank you for reporting it!"
+      },
+      {
+        "sender": "Customer",
+        "text": "Wow, glad I checked first. I almost clicked that link. Thanks for confirming — I'll report it as phishing."
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Confusion",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "High",
+    "suspicious_indicators": [
+      "Typosquatted sender domain: amaz0n-services.link (zero replacing 'o')",
+      "Malicious attachment disguised as PDF: .pdf.exe double extension",
+      "Urgency pressure: 48-hour deadline with service termination threat",
+      "Threat of permanent data deletion to create panic",
+      "Suspicious TLD: .link instead of official amazon.com domain",
+      "Customer correctly identified and reported the threat"
+    ]
+  },
+  {
+    "id": "CS-1006",
+    "customer_name": "James O'Brien",
+    "channel": "Live Chat",
+    "subject": "App keeps crashing on iOS after latest update",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Your app is completely unusable after the 4.2.1 update. Every time I open the dashboard, it freezes for 10 seconds then crashes. iPhone 14 Pro, iOS 17.6. I've tried reinstalling twice. This is ridiculous — I'm paying $29/month for a premium plan and can't even use the product."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi James, I'm really sorry about this experience, especially as a premium subscriber. We've been receiving similar reports from iOS 17.6 users since the 4.2.1 release. Our engineering team has identified a memory leak in the dashboard rendering module and a hotfix (4.2.2) is currently in App Store review.\n\nIn the meantime, could you try this workaround?\n1. Go to Settings > App > Storage\n2. Clear the app cache\n3. Relaunch and wait 15 seconds before navigating to dashboard\n\nThis has resolved the crash for about 70% of affected users."
+      },
+      {
+        "sender": "Customer",
+        "text": "Clearing the cache helped — it's not crashing anymore but it's still noticeably slower than before the update. When's the hotfix dropping?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Glad the crash is resolved for now! The hotfix is expected to clear App Store review within 24-48 hours. Version 4.2.2 specifically addresses both the crash and the performance regression. I'll add your account to our notification list so you'll get an email the moment it's live. As a goodwill gesture, I've also applied a 1-week credit to your premium subscription. Anything else I can help with?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Appreciate the credit. I'll wait for the update. Thanks."
+      }
+    ],
+    "expected_category": "Technical / App Issue",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Anger",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1007",
+    "customer_name": "IT Security Team",
+    "channel": "Email",
+    "subject": "MANDATORY: Company-Wide Password Reset — Complete by EOD",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "INTERNAL MEMO — CONFIDENTIAL\n\nFrom: IT Security Department <itsecurity@comp4ny-internal.net>\nTo: All Employees\nPriority: CRITICAL\n\nTeam,\n\nDue to a confirmed security breach detected at 06:15 AM today, ALL employee credentials have been potentially compromised. As a mandatory security measure, every employee must reset their password immediately using the secure portal below:\n\n🔐 https://comp4ny-internal.net/mandatory-reset\n\nYou will need to provide:\n• Current username and password\n• Employee ID\n• Manager's name for verification\n• Security question answers\n\nThis reset MUST be completed by 5:00 PM today. Employees who do not comply will have their accounts temporarily suspended and will not be able to access email, VPN, or internal tools until HR manually reinstates them.\n\nDo NOT contact the help desk about this — they are already overwhelmed. Use ONLY the link above.\n\nThank you for your prompt cooperation.\n\nRaj Patel\nChief Information Security Officer"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Authority impersonation: poses as CISO with internal memo formatting",
+      "Typosquatted domain: comp4ny-internal.net (numeral '4' replacing 'a')",
+      "Requests current password — legitimate resets never ask for existing credentials",
+      "Discourages contacting help desk to prevent verification",
+      "EOD deadline creates artificial urgency",
+      "Threatens account suspension and loss of access for non-compliance",
+      "Requests excessive PII: employee ID, manager name, security answers",
+      "Marked as CONFIDENTIAL to discourage sharing/verification"
+    ]
+  },
+  {
+    "id": "CS-1008",
+    "customer_name": "Lisa Park",
+    "channel": "Ticket",
+    "subject": "Requesting refund for cancelled subscription",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I cancelled my subscription on August 30th but I was still charged $14.99 on September 1st. My cancellation confirmation number is CAN-20260830-5521. I'd like a full refund for the September charge since I cancelled before the billing cycle."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Lisa, thank you for contacting us. I've pulled up your account and I can confirm your cancellation was processed on August 30th at 11:47 PM — which was before the September 1st billing cycle. The charge appears to have been a system timing issue.\n\nI've processed a full refund of $14.99 to your Visa ending in 3391. You should see it within 3-5 business days. Your cancellation remains in effect and you will not be charged going forward. A refund confirmation email has been sent to your registered address.\n\nIs there anything else I can assist you with?"
+      },
+      {
+        "sender": "Customer",
+        "text": "No, that covers it. Thank you for resolving this so quickly!"
+      }
+    ],
+    "expected_category": "Billing / Payment",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1009",
+    "customer_name": "Robert Akinwale",
+    "channel": "Email",
+    "subject": "Re: Your Recent Purchase — Confirm Delivery Details",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hello,\n\nThank you for your recent purchase from our store! We noticed a discrepancy in your shipping address and need to verify your details before we can dispatch your order.\n\nPlease confirm by clicking the link below:\n\nhttps://sh0pify-order-confirm.example.org/verify?order=RA-99211&auth=x7k2m\n\nYou'll need to re-enter:\n- Full shipping address\n- Payment card number for address verification\n- CVV code (required by our payment processor for address changes)\n\nIf we don't hear from you within 24 hours, your order will be cancelled and you will be charged a 15% restocking fee.\n\nBest regards,\nOrder Fulfillment Team\nCustomer ID: #RA-44210"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: sh0pify-order-confirm.example.org (zero replacing 'o')",
+      "Requests full card number and CVV — no legitimate retailer asks for CVV via email",
+      "Fabricated restocking fee threat to pressure quick action",
+      "24-hour artificial deadline",
+      "Vague 'discrepancy' claim without specifics",
+      "No reference to actual product purchased",
+      "Sender does not match any legitimate store domain"
+    ]
+  },
+  {
+    "id": "CS-1010",
+    "customer_name": "Aisha Karim",
+    "channel": "Live Chat",
+    "subject": "Received wrong item in my order",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I ordered a navy blue wireless mouse (SKU: WM-3342-NB) but received a pink one instead. Order #ORD-77821. I need the correct color for my office setup."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Aisha, I apologize for the mix-up! That's definitely not what you ordered. I can see the navy blue variant is currently in stock. Would you like me to:\n\n1. Ship the correct item immediately with a prepaid return label for the pink one\n2. Offer a 20% discount if you'd like to keep the pink mouse\n\nEither way, no extra cost to you."
+      },
+      {
+        "sender": "Customer",
+        "text": "Option 1 please — I specifically need the navy blue. How do I return the wrong one?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Perfect! I've placed the replacement order with express shipping — should arrive by September 20th. I'm emailing you a prepaid return label right now. Just stick it on the box the pink mouse came in and drop it at any FedEx location within the next 14 days. No need to repackage it. Tracking for your replacement: TRK-88201-EXP."
+      },
+      {
+        "sender": "Customer",
+        "text": "Great, thanks for making this easy."
+      }
+    ],
+    "expected_category": "Delivery / Shipping",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1011",
+    "customer_name": "Thomas Wright",
+    "channel": "Email",
+    "subject": "URGENT — CEO Authorization for Emergency Wire Transfer",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi,\n\nThis is Thomas Wright, CEO. I'm currently in a board meeting and cannot take calls. I need you to process an urgent wire transfer of $28,500 to a vendor for a time-sensitive acquisition deal that closes today.\n\nWire details:\nBank: First National Trust\nRouting: 021000089\nAccount: 4478 2291 0053\nBeneficiary: Apex Strategic Holdings LLC\nReference: ACQ-2026-CONFIDENTIAL\n\nThis has been pre-approved by the CFO. Please process immediately and confirm via email. Do NOT discuss this with anyone else on the team as the deal is under NDA.\n\nI'll follow up after my meeting.\n\nTom\n\nSent from my iPhone"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "CEO impersonation / Business Email Compromise (BEC) attack",
+      "Requests urgent wire transfer bypassing normal approval processes",
+      "Claims to be unavailable for voice/call verification",
+      "Instructs not to discuss with other team members (isolation tactic)",
+      "Invokes NDA confidentiality to prevent verification",
+      "References pre-approval by CFO without documentation",
+      "'Sent from my iPhone' footer to explain informal tone and lack of signature",
+      "Unknown beneficiary: Apex Strategic Holdings LLC"
+    ]
+  },
+  {
+    "id": "CS-1012",
+    "customer_name": "Fumiko Tanaka",
+    "channel": "Ticket",
+    "subject": "Feature request: Dark mode for the mobile app",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hello! First off, I want to say I really love using your product — it's been a game changer for managing my team's projects. One thing I'd love to see is a dark mode option for the mobile app. I use it late at night and the bright white interface is pretty harsh on the eyes. I know it's probably on your roadmap already but figured I'd add my voice. Keep up the great work!"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Fumiko, thank you so much for the kind words — feedback like this genuinely makes our day! 😊\n\nGreat news: dark mode for mobile is actually in active development right now! It's planned for our v5.0 release, tentatively scheduled for late October. I've added your feedback to the feature request tracker so the product team knows there's strong demand.\n\nIn the meantime, a small tip: if you're on iOS, you can enable Settings > Display > Smart Invert, which does a decent job of darkening most of the app's UI. Not perfect, but helps for late-night use.\n\nThanks again for being a loyal user!"
+      },
+      {
+        "sender": "Customer",
+        "text": "That Smart Invert tip is genius — it actually works pretty well! Looking forward to the official dark mode. Thanks!"
+      }
+    ],
+    "expected_category": "Technical / Feature Request",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1013",
+    "customer_name": "Bank Security Team",
+    "channel": "Email",
+    "subject": "⚠ Fraud Alert: Verify Recent Transactions or Face Account Lock",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Account Holder,\n\nWe have flagged the following suspicious transactions on your account:\n\n| Date       | Merchant             | Amount    |\n|------------|----------------------|-----------|\n| 09/16/2026 | CryptoExch Transfer  | $3,200.00 |\n| 09/17/2026 | Wire - Offshore Acct | $8,750.00 |\n| 09/17/2026 | ATM Withdrawal Lagos | $1,000.00 |\n\nIf you did NOT authorize these transactions, you must verify your identity immediately to prevent further unauthorized activity:\n\n🔒 Secure Verification Portal: https://chas3-bank-alerts.example.com/fraud-verify\n\nDuring verification, you will be asked to confirm:\n- Online banking username and password\n- Social Security Number (last 4 digits)\n- Debit card number and PIN\n- Recent OTP code\n\nIMPORTANT: Your account will be PERMANENTLY LOCKED within 4 hours if verification is not completed. Locked accounts require in-branch visit with two forms of government ID to restore.\n\nDo not call our general helpline — this alert is handled exclusively through the secure portal above.\n\nFraud Prevention Division\nChase Bank\nCase ID: FRD-2026-0918-44291"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: chas3-bank-alerts.example.com (numeral '3' replacing 'e')",
+      "Requests banking password, SSN, card number, PIN, and OTP — extreme credential harvesting",
+      "Impersonates Chase Bank Fraud Prevention Division",
+      "Fabricated suspicious transactions table to trigger fear",
+      "4-hour permanent lock deadline creates extreme urgency",
+      "Discourages calling the real helpline to prevent verification",
+      "Claims only the phishing portal can resolve the issue",
+      "Fabricated case ID for false legitimacy"
+    ]
+  },
+  {
+    "id": "CS-1014",
+    "customer_name": "Carlos Mendoza",
+    "channel": "Live Chat",
+    "subject": "Subscription auto-renewed but I wanted to cancel",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I thought I turned off auto-renew last month but I just got charged $99 for the annual plan. I definitely don't want to continue for another year. Can I get a refund and cancel?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Carlos, let me check your account settings. I can see that the auto-renew toggle was turned off on August 22nd, but it looks like it was toggled back on August 25th from the mobile app. It's possible it was re-enabled accidentally. Given the circumstances, I can offer a full refund since you clearly intended to cancel."
+      },
+      {
+        "sender": "Customer",
+        "text": "That's weird — I don't remember turning it back on. But yes, please refund and cancel."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Understood. I've processed the following:\n\n✅ Full refund of $99.00 — 5-7 business days to your payment method\n✅ Subscription cancelled — no future charges\n✅ You'll retain access until September 30th (end of your current billing period)\n\nI've also submitted feedback to our product team about making the auto-renew toggle more clear to prevent accidental re-enabling. Thank you for being a subscriber, Carlos — we hope to see you back in the future!"
+      },
+      {
+        "sender": "Customer",
+        "text": "Appreciate you handling this fairly. I might come back if the pricing changes. Cheers."
+      }
+    ],
+    "expected_category": "Billing / Payment",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1015",
+    "customer_name": "Nadia Okonkwo",
+    "channel": "Ticket",
+    "subject": "Still waiting on my delayed order — 2 weeks overdue",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, my order #ORD-65521 was supposed to arrive on September 4th. It's now September 18th and the tracking has been stuck on 'In Transit — Delayed' since September 7th. I've tried contacting the shipping carrier directly and they say they need the sender to file an investigation. This is a birthday gift that's now 2 weeks late. Very disappointed."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Nadia, I'm truly sorry about this. Two weeks stuck in transit is unacceptable and I understand how frustrating this must be, especially for a gift. I've checked with our logistics team and it appears the package may be lost in a carrier sorting facility.\n\nI'm taking the following actions right now:\n1. Filing a formal lost package investigation with the carrier (case will be opened within 24 hours)\n2. Shipping a replacement order via overnight express at no charge\n\nHowever, I need to check one thing — is the item still in stock in the same variant you ordered? Let me verify that before I confirm the replacement. I'll update you within the hour."
+      },
+      {
+        "sender": "Customer",
+        "text": "Please check and let me know ASAP. If it's out of stock, I'd rather have a refund so I can buy something else. The birthday was last week already."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "I completely understand. I'm checking inventory now and will respond within the hour with either a replacement confirmation or a full refund. I'm also applying a $25 store credit to your account for the inconvenience regardless of which option we go with. Thank you for your patience, Nadia."
+      }
+    ],
+    "expected_category": "Delivery / Shipping",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1016",
+    "customer_name": "Amelia Rodriguez",
+    "channel": "Live Chat",
+    "subject": "Forgot password and recovery email is my old email",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I forgot my password and when I try to reset it, the recovery link is being sent to my old college email which I no longer have access to. I changed jobs 2 years ago. My current email is amelia.r@protonmail.com. How do I get back into my account?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Amelia, I understand the frustration. For security reasons, I'll need to verify your identity through an alternative method before updating your recovery email. Can you provide:\n\n1. The full name on the account\n2. The date the account was created (approximate is fine)\n3. The last 4 digits of the payment card on file\n4. A recent order number or transaction you remember"
+      },
+      {
+        "sender": "Customer",
+        "text": "Sure — Amelia Rodriguez, I think I created it around March 2024, card ending 7219, and my last order was #ORD-54102 in August."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "All verified ✅. I've updated your recovery email to amelia.r@protonmail.com and sent a password reset link there. It expires in 30 minutes. Once you're logged in, I'd recommend:\n- Setting up a backup phone number under Settings > Security\n- Enabling an authenticator app for 2FA\n\nThat way you'll never get locked out again. Anything else?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Just reset it successfully. Will set up the phone backup now. Thank you!"
+      }
+    ],
+    "expected_category": "Account / Login",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Confusion",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1017",
+    "customer_name": "Kwame Mensah",
+    "channel": "Ticket",
+    "subject": "Promo code SAVE30 not applying at checkout",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I received a promotional email yesterday with code SAVE30 for 30% off my next order. When I enter it at checkout, I get 'This code is invalid or expired.' The email says it's valid until September 25th. My cart total is $212.50. Can you apply it manually?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Kwame, thanks for bringing this to our attention. I looked into this and the SAVE30 code has a minimum order requirement of $250 — unfortunately your cart at $212.50 falls just short. This restriction was in the fine print of the promotional email.\n\nHowever, I have two options for you:\n1. If you add items to reach $250, the code will work automatically\n2. I can apply a one-time 20% discount manually to your current cart right now — that would bring it to $170.00\n\nWhich works better for you?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Hmm that's annoying — the email wasn't clear about that. I'll take the 20% manual discount please."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Done! I've applied a 20% discount to your cart. Your new total is $170.00. The discount will remain applied for the next 2 hours while you complete checkout. I've also passed feedback to our marketing team about making promo terms clearer. Have a great day, Kwame!"
+      }
+    ],
+    "expected_category": "Billing / Payment",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1018",
+    "customer_name": "Grace Liu",
+    "channel": "Ticket",
+    "subject": "Desktop app not syncing with mobile — data mismatch",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I've been entering data on the desktop app all week but when I open the mobile app, none of my recent entries from the past 3 days are showing up. I'm on desktop v3.8.2 and mobile v4.2.1. This is causing real problems because my team is relying on the mobile view in the field. Is there a sync issue?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Grace, thank you for reporting this. This sounds like a version mismatch sync issue. Desktop v3.8.2 uses our legacy sync protocol, while mobile v4.2.1 uses the new real-time sync engine. They're temporarily incompatible until desktop v3.9.0 releases next week.\n\nImmediate workaround:\n1. On desktop, go to File > Force Sync > Full Upload\n2. Wait 2 minutes\n3. On mobile, pull down to refresh on the main screen\n\nThis should pull in your missing entries. You may need to do this daily until the desktop update lands. Would you like me to add you to the priority notification list for the update?"
+      },
+      {
+        "sender": "Customer",
+        "text": "The force sync worked — I can see everything now on mobile. Yes please add me to that notification list. This is a pretty significant bug for teams using both platforms."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Agreed — our engineering team is treating this as a P1 issue. You've been added to the notification list and you'll get an email the moment v3.9.0 is available. I've also linked your ticket to the engineering issue so they can see real-world impact. Thanks for the detailed report, Grace."
+      }
+    ],
+    "expected_category": "Technical / App Issue",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1019",
+    "customer_name": "Henrik Johansson",
+    "channel": "Email",
+    "subject": "International shipment stuck in customs for 10 days",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "My order #INT-20260903-SE has been stuck at 'Customs Processing' in Stockholm for 10 days now. Tracking number: SE-TRK-44892100. I paid $35 for international shipping and expected delivery by September 10th. I've contacted Swedish customs and they say the package has an incomplete commercial invoice from the shipper side. Can your team fix this?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Henrik, I'm sorry for this delay. You're correct — our logistics team confirmed that the commercial invoice attached to your shipment was missing the HS tariff code, which Swedish customs requires. We've prepared a corrected invoice and are submitting it to the carrier today. Once they forward it to customs, clearance typically takes 2-3 business days.\n\nI've also refunded your $35 shipping fee as this delay was entirely our error. The refund will appear in 3-5 business days."
+      },
+      {
+        "sender": "Customer",
+        "text": "Thank you for the shipping refund — I appreciate that. Please keep me posted on the customs clearance. I'll be traveling after September 25th so I really need it before then."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Understood. I've set a reminder to follow up with the carrier on Monday and will email you an update regardless. Based on current timelines, you should receive the package by September 23-24th — well before your travel. I'll make sure this doesn't fall through the cracks."
+      }
+    ],
+    "expected_category": "Delivery / Shipping",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1020",
+    "customer_name": "Deepak Patel",
+    "channel": "Live Chat",
+    "subject": "Question about upgrading from Basic to Business plan",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I'm currently on the Basic plan ($9/mo) and thinking about upgrading to Business ($39/mo). A few questions: 1) Is the upgrade prorated for the rest of the month? 2) Do I keep my existing data and settings? 3) Can I add team members immediately after upgrading?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Great questions, Deepak! Here are the answers:\n\n1. **Prorated**: Yes! If you upgrade today (September 18th), you'll only be charged ~$15.60 for the remainder of this billing cycle, then $39/mo starting next cycle.\n2. **Data & Settings**: Everything transfers seamlessly — all your projects, files, integrations, and preferences stay exactly as they are.\n3. **Team Members**: You can add up to 10 team members immediately after upgrade. They'll receive invitation emails within minutes.\n\nBonus: Business plan also includes priority support, API access, and advanced analytics. Would you like me to process the upgrade now?"
+      },
+      {
+        "sender": "Customer",
+        "text": "That sounds good. Yes, please upgrade me to Business. And can you confirm the prorated amount before charging?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Your prorated charge for September 18-30 will be exactly $15.60. Your next full charge of $39.00 will be on October 1st. I've processed the upgrade — you should see the Business features available in your dashboard within 60 seconds. A confirmation email with the invoice is on its way. Welcome to Business! 🎉"
+      },
+      {
+        "sender": "Customer",
+        "text": "Perfect, I can already see the new features. Thanks for the smooth upgrade!"
+      }
+    ],
+    "expected_category": "Billing / Payment",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1021",
+    "customer_name": "Olivia Bennett",
+    "channel": "Ticket",
+    "subject": "Request to export all my account data (GDPR)",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Under GDPR Article 20 (Right to Data Portability), I'm formally requesting a complete export of all personal data you hold about my account (olivia.bennett@gmail.com). This includes: profile information, purchase history, support interactions, analytics data, and any third-party data sharing logs. Please provide this in a machine-readable format (JSON or CSV preferred) within the 30-day statutory period."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Olivia, thank you for your formal request. We take GDPR compliance very seriously. I've registered your data portability request under reference GDPR-DP-20260918-0044.\n\nHere's what to expect:\n- **Timeline**: We aim to deliver within 15 business days (well within the 30-day statutory requirement)\n- **Format**: Your data will be provided as a structured JSON archive with separate files for each data category\n- **Delivery**: Secure download link sent to your verified email address\n- **Scope**: Profile, purchase history, support tickets, analytics events, consent logs, and any third-party data shares\n\nYou'll receive an email confirmation of this request within 24 hours. Is there anything specific you'd like prioritized in the export?"
+      },
+      {
+        "sender": "Customer",
+        "text": "No, a comprehensive export is fine. Thank you for the clear timeline."
+      }
+    ],
+    "expected_category": "Account / Privacy",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Neutral",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1022",
+    "customer_name": "Ryan Fitzgerald",
+    "channel": "Live Chat",
+    "subject": "Missing item from my multi-item order",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I just received my order #ORD-91023 but one of the three items is missing. I ordered: (1) USB-C Hub - received ✅, (2) Laptop Stand - received ✅, (3) Webcam HD Pro - NOT in the box ❌. The packing slip shows all three items but only two were in the package."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Ryan, I'm sorry about the missing webcam. I've checked and it looks like the Webcam HD Pro was packed separately due to its size and is actually in a second shipment. Tracking: TRK-91023-B, which shows it's out for delivery today and should arrive by end of day.\n\nCould you check if you received a shipping notification for the second package? It would have been sent on September 16th."
+      },
+      {
+        "sender": "Customer",
+        "text": "Oh! Just checked my email — I do see that second tracking. It says delivery by 6 PM today. My bad for the panic. Sorry about that!"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "No need to apologize at all — it's a very common question when orders are split! We should do a better job of noting split shipments on the packing slip. I've passed that feedback along. If the second package doesn't arrive today, just reply here and I'll look into it right away. Enjoy your new setup! 😊"
+      }
+    ],
+    "expected_category": "Delivery / Shipping",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Confusion",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1023",
+    "customer_name": "Microsoft Account Team",
+    "channel": "Email",
+    "subject": "Action Required: Unusual Sign-In Activity on Your Microsoft 365 Account",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Microsoft Account Security Alert\n\nWe detected unusual sign-in activity on your Microsoft 365 account from the following location:\n\nIP Address: 185.220.101.34\nLocation: Moscow, Russian Federation\nDevice: Unknown Linux Device\nTime: September 18, 2026 at 02:17 AM UTC\n\nIf this wasn't you, your account may be compromised. Secure your account immediately by verifying your credentials through our enhanced security portal:\n\nhttps://micr0soft-365-security.example.com/verify-account\n\nYou will need to:\n1. Enter your current Microsoft 365 email and password\n2. Confirm your identity with your phone number\n3. Review and approve/deny recent sessions\n4. Set a new recovery email\n\n⚠️ If no action is taken within 6 hours, we will be forced to temporarily disable your account to prevent unauthorized access to your OneDrive, Outlook, and Teams data.\n\nMicrosoft Account Protection Team\nRef: MS-SEC-2026-4419201\n\nThis is an automated message from Microsoft Corporation. Please do not reply."
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: micr0soft-365-security.example.com (zero replacing 'o')",
+      "Requests current password via external link — Microsoft never does this",
+      "6-hour deadline with account disable threat",
+      "Impersonates Microsoft Account Protection Team",
+      "Uses scary geolocation details (Moscow, Russian Federation) to trigger fear",
+      "Discourages replying to prevent verification through official channels",
+      "Fabricated reference number for false legitimacy"
+    ]
+  },
+  {
+    "id": "CS-1024",
+    "customer_name": "Sophia Reyes",
+    "channel": "Ticket",
+    "subject": "Just wanted to say thank you for amazing support last week!",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi team! This isn't a complaint — I just wanted to give a huge shoutout to your support agent Maria who helped me last week (Ticket #CS-0987). I was having a nightmare migrating my data from the old platform and Maria stayed on the call for over an hour, walked me through every step, and even followed up the next day to make sure everything was working. That level of care is rare. Please pass along my thanks and I hope she gets recognized for it. You've got a customer for life! ⭐⭐⭐⭐⭐"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Sophia, this absolutely made our day! 🌟 I've shared your message with Maria and her team lead — it means the world to us when customers take the time to share positive feedback. Maria will receive a commendation in our next team meeting.\n\nWe're thrilled the migration went smoothly and that you're enjoying the platform. If you ever need anything in the future, don't hesitate to reach out. And if you have a spare moment, we'd love a review on G2 or Trustpilot — it helps other customers find us!\n\nThank you for being an incredible customer, Sophia! 💛"
+      }
+    ],
+    "expected_category": "General / Feedback",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1025",
+    "customer_name": "Andre Williams",
+    "channel": "Email",
+    "subject": "Thinking about cancelling — need a reason to stay",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I've been a subscriber for 2 years but I'm seriously considering cancelling. The price went up from $19 to $29/month last quarter with no new features that I actually use. My team of 3 barely uses half the tools available. I've been looking at CompetitorX which offers similar core features at $15/month. Before I cancel, I wanted to see if there's anything you can do."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Andre, thank you for your loyalty over the past 2 years and for giving us the opportunity to keep you. Your feedback is really valuable. I understand the price increase was frustrating, especially if the new features don't align with your workflow.\n\nI'd like to offer you a few options:\n\n1. **Loyalty discount**: 25% off for the next 6 months ($21.75/mo instead of $29)\n2. **Downgrade to Essentials**: Our new Essentials tier at $17/mo includes the core features your team uses most — let me know which tools you rely on and I can confirm if Essentials covers them\n3. **Annual billing**: Switch to annual and lock in $22/mo (saving 24%)\n\nWould any of these work for you?"
+      },
+      {
+        "sender": "Customer",
+        "text": "The Essentials tier at $17 sounds interesting. We primarily use project boards, file sharing, and the team chat. Does Essentials include those?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Yes! Essentials includes all three: project boards, file sharing (up to 50GB), and team chat with unlimited messaging. The main features excluded from Essentials are advanced analytics, Gantt charts, and API access. Based on your usage patterns, Essentials looks like a perfect fit.\n\nWant me to switch you over? Your data, projects, and team members will all transfer seamlessly."
+      },
+      {
+        "sender": "Customer",
+        "text": "Yes, please switch me to Essentials. $17/mo is much more reasonable. Thanks for working with me on this."
+      }
+    ],
+    "expected_category": "Billing / Subscription",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1026",
+    "customer_name": "HR Department",
+    "channel": "Email",
+    "subject": "URGENT: Update Your Direct Deposit Information — Payroll System Migration",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Team Member,\n\nAs part of our transition to a new payroll processing system (effective October 1st), all employees are required to re-verify their direct deposit information to ensure uninterrupted salary payments.\n\nPlease complete the verification form by September 22nd:\n\n🔗 https://hr-payro1l-update.example.net/employee-verify\n\nYou will need to provide:\n- Full legal name\n- Employee ID\n- Social Security Number\n- Bank routing and account numbers\n- A void check or bank statement upload\n\n⚠️ IMPORTANT: Employees who do not complete verification by the deadline will have their direct deposit suspended and will receive paper checks mailed to their address on file, which may result in a 2-3 week payment delay.\n\nPlease do not forward this email as it contains a personalized verification link tied to your employee record.\n\nBest regards,\nJennifer Walsh\nDirector of Human Resources\nPeople Operations Division"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: hr-payro1l-update.example.net (numeral '1' replacing 'l')",
+      "Requests SSN and full bank account details via external link",
+      "Impersonates HR Director with fabricated name and department",
+      "Threat of delayed payment creates financial fear",
+      "Discourages forwarding to prevent verification by colleagues or IT",
+      "Claims personalized link to discourage sharing",
+      "Exploits trust in internal HR communications"
+    ]
+  },
+  {
+    "id": "CS-1027",
+    "customer_name": "Takeshi Yamamoto",
+    "channel": "Ticket",
+    "subject": "API rate limit exceeded — production app impacted",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "URGENT: Our production application started receiving HTTP 429 (Rate Limit Exceeded) errors from your API about 2 hours ago. We're on the Business plan which should have 10,000 requests/minute but our monitoring shows we're only hitting ~6,000 req/min. Error response: {\"error\": \"rate_limit_exceeded\", \"limit\": 5000, \"plan\": \"starter\"}. It seems like our account got downgraded somehow? Our API key is tk_prod_****7291. This is impacting thousands of our end users."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Takeshi, I'm treating this as a P0 incident. I've identified the issue — during a billing system migration at 08:30 AM UTC today, a small batch of Business plan accounts were incorrectly flagged as Starter tier in our rate limiter. Your account was one of 23 affected.\n\nI've manually restored your rate limits to 10,000 req/min effective immediately. Can you confirm if you're still seeing 429 errors? The fix should propagate within 60 seconds."
+      },
+      {
+        "sender": "Customer",
+        "text": "Checking now... yes, our monitoring is showing successful responses again. 429 errors have stopped as of 3 minutes ago. What caused this and how will you prevent it from happening again?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Glad it's resolved. Root cause: our billing migration script had a race condition that defaulted unprocessed accounts to Starter tier limits during the transition window. We're implementing three safeguards:\n\n1. Pre-migration snapshot validation to prevent tier downgrades\n2. Automated alerts when any account's rate limits change unexpectedly\n3. A 30-minute grace period buffer during migrations\n\nI'm also preparing a post-incident report that I can share with your team if you need it for your own stakeholders. We'll also credit your account for the 2 hours of degraded service. Expect the credit on your next invoice."
+      }
+    ],
+    "expected_category": "Technical / API",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Anger",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1028",
+    "customer_name": "Monica Alvarez",
+    "channel": "Live Chat",
+    "subject": "Bulk order discount for 50+ licenses",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I'm the IT procurement lead at Greenfield Corp. We're looking to purchase 75 licenses of your Enterprise plan for a company-wide rollout. At the listed price of $59/user/month, that's $4,425/month. What kind of volume discount can you offer?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Monica, thanks for considering us for a company-wide deployment! For 75+ Enterprise licenses, I can offer the following tiered pricing:\n\n| Tier | Price/User/Month | Total Monthly | Savings |\n|------|-----------------|---------------|----------|\n| Standard | $59.00 | $4,425.00 | — |\n| Volume 50+ | $49.00 | $3,675.00 | 17% |\n| Annual Commitment | $42.00 | $3,150.00 | 29% |\n\nThe annual commitment pricing requires a 12-month agreement billed annually. All tiers include dedicated account manager, priority support, SSO/SAML, and custom onboarding.\n\nWould you like me to prepare a formal quote for your procurement team?"
+      },
+      {
+        "sender": "Customer",
+        "text": "The annual commitment at $42/user looks great. Yes please — prepare a formal quote for 75 licenses at that rate. I'll need it addressed to Greenfield Corp, Attn: Monica Alvarez, Procurement. Can you also include your standard SLA terms?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Absolutely! I'll have the formal quote with SLA terms ready and emailed to your registered address within 2 business hours. I'm also looping in our Enterprise Account Manager, Derek, who'll be your dedicated point of contact going forward. He'll reach out today to schedule a brief onboarding planning call. Anything else you need for the procurement process?"
+      },
+      {
+        "sender": "Customer",
+        "text": "That's everything for now. Looking forward to Derek's call. Thanks!"
+      }
+    ],
+    "expected_category": "Billing / Sales",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1029",
+    "customer_name": "Patricia Nguyen",
+    "channel": "Email",
+    "subject": "Warranty claim — defective wireless earbuds after 3 months",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, I purchased the ProSound X3 wireless earbuds on June 15th (Order #ORD-44891, $129.99). The left earbud has completely stopped working — no sound, won't charge, and the LED doesn't light up. The right one is fine. I've tried resetting, updating firmware, and different charging cables. Nothing works. These are only 3 months old and should still be under your 1-year warranty. How do I get a replacement?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Patricia, I'm sorry to hear about the defective earbud. You're absolutely right — your purchase is well within our 1-year warranty period. Based on your troubleshooting (thank you for being thorough!), this sounds like a hardware failure in the left earbud's charging circuit.\n\nHere's the warranty replacement process:\n1. I'm generating a prepaid return shipping label — check your email in the next 10 minutes\n2. Ship back the defective pair in any secure packaging\n3. Once we receive and inspect them (1-2 business days), we'll ship a brand-new replacement pair\n\nAlternatively, I can send the replacement immediately via cross-ship — you'd have a temporary hold of $129.99 on your card until we receive the defective pair back. Which option works for you?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Cross-ship please — I use these daily for work calls and can't be without earbuds for a week."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Understood! I've initiated the cross-shipment:\n- New ProSound X3 earbuds shipping via 2-day express (arriving ~September 20th)\n- Temporary authorization hold of $129.99 on your Visa ending in 8102\n- Hold will be released within 48 hours of us receiving your return\n- Prepaid return label is in your inbox\n\nYou have 14 days to ship back the defective pair. Tracking for your replacement: TRK-WRN-55123."
+      }
+    ],
+    "expected_category": "Product / Warranty",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1030",
+    "customer_name": "Apple Support",
+    "channel": "Email",
+    "subject": "Your Apple ID Has Been Used to Sign In on a New Device",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Customer,\n\nYour Apple ID (j***@icloud.com) was used to sign in to iCloud on a new device:\n\nDevice: Windows PC\nLocation: Bucharest, Romania\nDate: September 18, 2026 at 04:55 AM EEST\n\nIf you did not sign in to this device, someone may be using your account without your knowledge. We recommend you verify your account and change your password immediately using the link below:\n\nhttps://appIe-id-verify.example.com/secure-login?ref=AID-20260918\n\nIMPORTANT: You will need to provide your current Apple ID password, the 6-digit verification code sent to your trusted device, and your date of birth to confirm your identity.\n\nIf you believe your account has been compromised, act immediately. Accounts that remain unverified after suspicious activity will be locked for your protection within 12 hours.\n\nApple Support\nApple Inc.\n\nThis email was sent automatically. Do not reply."
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: appIe-id-verify.example.com (uppercase 'I' replacing lowercase 'l' in Apple)",
+      "Requests current password AND verification code — Apple never asks for both via email link",
+      "12-hour account lock threat to create urgency",
+      "Uses partial email masking (j***@icloud.com) to appear legitimate",
+      "Scary foreign login location (Bucharest, Romania) to trigger panic",
+      "Instructs not to reply — funneling to phishing link only",
+      "Legitimate Apple sign-in alerts never include clickable password reset links"
+    ]
+  },
+  {
+    "id": "CS-1031",
+    "customer_name": "Vendor Finance Team",
+    "channel": "Email",
+    "subject": "Updated Bank Details for Vendor Payment — Invoice #VN-2026-8831",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Accounts Payable,\n\nI hope this email finds you well. I'm writing regarding our outstanding invoice #VN-2026-8831 for $34,200.00 (consulting services — August 2026).\n\nPlease note that we have recently changed our banking provider. Effective immediately, all future payments should be sent to our new account:\n\nBank: Metropolitan Savings Bank\nAccount Name: Vertex Consulting Partners LLC\nRouting Number: 071000013\nAccount Number: 8829 4410 2276\nSWIFT: MTSVUS33\n\nPlease update your records and process the outstanding payment to the new account details above. We kindly request confirmation once the payment has been initiated.\n\nI've attached the updated W-9 form for your records: Updated_W9_Vertex_2026.docm\n\nThank you for your prompt attention to this matter.\n\nBest regards,\nDaniel Morrison\nFinance Director\nVertex Consulting Partners\nPhone: +1 (332) 555-0194"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Neutral",
+    "expected_emotion": "Neutral",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Vendor payment redirect / Business Email Compromise (BEC) variant",
+      "Requests change of bank account for existing vendor — classic payment diversion attack",
+      "Attached .docm file (macro-enabled document) — potential malware payload",
+      "No prior communication chain or relationship context",
+      "Polished professional tone designed to bypass suspicion",
+      "Urgency implied through 'outstanding' invoice and 'prompt attention'",
+      "Should be verified by calling the vendor directly on a known number, not the one provided"
+    ]
+  },
+  {
+    "id": "CS-1032",
+    "customer_name": "Kevin Brooks",
+    "channel": "Live Chat",
+    "subject": "Wireless headset not connecting to laptop via Bluetooth",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Just got the BT-700 Pro headset and it won't pair with my Dell laptop. I turned on Bluetooth, put the headset in pairing mode (held the button for 5 seconds, blue light flashing), but the laptop doesn't see it in the available devices list. Windows 11."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Kevin! Let's troubleshoot this step by step:\n\n1. First, can you check if your laptop's Bluetooth driver is up to date? Go to Device Manager > Bluetooth > right-click your adapter > Update Driver\n2. Try removing any previously paired BT-700 devices: Settings > Bluetooth > look for any 'BT-700' entries and click Remove\n3. Power cycle the headset: hold the button for 10 seconds until it fully shuts off, then hold again for 5 seconds to enter fresh pairing mode\n\nDoes the headset show a rapidly alternating blue/red flash? That indicates proper pairing mode."
+      },
+      {
+        "sender": "Customer",
+        "text": "Updated the driver — Windows found a newer one. Removed old entries. Now the headset is doing the blue/red flash... and my laptop found it! It says 'BT-700 Pro' in the list. Connecting now... paired! Audio is coming through. That driver update did the trick."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Excellent! 🎧 Glad it was just an outdated driver. Quick tip: the BT-700 Pro supports multipoint connection — you can pair it with your phone simultaneously. Just hold the pairing button again while connected to your laptop and pair with your phone. It'll automatically switch between them based on which device is playing audio. Enjoy!"
+      }
+    ],
+    "expected_category": "Technical / Product Support",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1033",
+    "customer_name": "IRS Tax Division",
+    "channel": "Email",
+    "subject": "NOTICE: Unclaimed Tax Refund of $4,819.00 — File Immediately or Forfeit",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "INTERNAL REVENUE SERVICE\nDepartment of the Treasury\n\nNOTICE OF UNCLAIMED TAX REFUND\nTax Year: 2025\nRefund Amount: $4,819.00\nNotice Number: CP-2026-IRS-99210\n\nDear Taxpayer,\n\nOur records indicate that you are entitled to a tax refund of $4,819.00 for the 2025 tax year. This refund was not claimed during regular processing and must be filed within 5 business days to avoid forfeiture under IRC Section 6402.\n\nTo claim your refund, complete the secure verification form:\n\nhttps://irs-refund-claim.example.org/verify-taxpayer\n\nRequired information:\n- Full legal name and date of birth\n- Social Security Number\n- 2025 Adjusted Gross Income (AGI)\n- Bank routing and account numbers for direct deposit\n- Copy of government-issued photo ID (upload)\n\nIMPORTANT: Failure to file within 5 business days will result in permanent forfeiture of your refund. The IRS cannot extend this deadline.\n\nThis notice is generated automatically. For questions, use the secure portal above. Do not call the IRS general helpline as they cannot access refund claims in processing.\n\nInternal Revenue Service\nRefund Processing Center\nAustin, TX 78741"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Government impersonation: fabricated IRS notice with official formatting",
+      "Phishing domain: irs-refund-claim.example.org — IRS only uses irs.gov",
+      "Requests SSN, bank details, AGI, and photo ID — extreme identity theft risk",
+      "5-day forfeiture deadline creates artificial urgency",
+      "IRS never initiates contact via email for refund claims",
+      "Discourages calling real IRS helpline to prevent verification",
+      "Fabricated IRC Section and notice number for false authority",
+      "Greed motivation: large unclaimed refund to tempt compliance"
+    ]
+  },
+  {
+    "id": "CS-1034",
+    "customer_name": "Meera Iyer",
+    "channel": "Live Chat",
+    "subject": "App draining battery excessively since last update",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, ever since I updated your app to version 6.1.0 on my Samsung Galaxy S24, my battery has been draining about 40% faster than normal. The app is showing as the #1 battery consumer at 35% usage even when I'm not actively using it. It's also running warm. What's going on?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Meera, thanks for reporting this. We've received similar reports from Android 14 users on version 6.1.0. Our engineering team identified that a background sync process is running more frequently than intended due to a configuration error in this release.\n\nImmediate fix while we push a patch:\n1. Go to your phone's Settings > Apps > [Our App] > Battery\n2. Change from 'Unrestricted' to 'Optimized'\n3. Inside the app, go to Settings > Sync > change sync frequency from 'Real-time' to 'Every 15 minutes'\n\nThis should dramatically reduce the battery drain. A hotfix (6.1.1) is in testing and should be on the Play Store within 48 hours."
+      },
+      {
+        "sender": "Customer",
+        "text": "Changed both settings. Already noticing it's cooled down. I'll monitor battery usage today and report back. When exactly will 6.1.1 drop?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "We're targeting tomorrow evening (September 19th) for the Play Store rollout. It may take up to 24 hours after that for the auto-update to reach your device, but you can check manually in the Play Store. I've noted your device model to ensure S24 is in our testing matrix. Thanks for your patience, Meera — and please don't hesitate to reach out if the battery drain continues."
+      }
+    ],
+    "expected_category": "Technical / App Issue",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Frustration",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1035",
+    "customer_name": "Netflix Support",
+    "channel": "Email",
+    "subject": "Your Netflix Account Has Been Suspended — Update Payment Now",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Netflix Member,\n\nWe were unable to process your monthly payment of $22.99. Your account has been temporarily suspended effective September 17, 2026.\n\nTo restore your access and avoid losing your:\n✘ Watch history and personalized recommendations\n✘ Downloaded content on all devices\n✘ Profiles (including kids profiles)\n✘ My List saves\n\nPlease update your payment information within 24 hours:\n\nhttps://netfIix-billing-update.example.com/restore-account?uid=NF-881204\n\nYou will need to:\n1. Confirm your current email and password\n2. Enter updated credit card or debit card information\n3. Verify with the CVV and billing zip code\n\nAfter 24 hours, your account and all associated data will be permanently deleted and cannot be recovered.\n\nNetflix Billing Support\nHelp Center: https://netfIix-billing-update.example.com/help\nRef: NF-BILL-2026-0918-7742\n\n© 2026 Netflix, Inc."
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Typosquatted domain: netfIix-billing-update.example.com (uppercase 'I' replacing lowercase 'l')",
+      "Requests email, password, full card number, and CVV — complete credential and payment harvesting",
+      "24-hour permanent deletion threat — Netflix never permanently deletes for one missed payment",
+      "Fear of losing watch history, downloads, and profiles to motivate action",
+      "Fake help center URL also points to phishing domain",
+      "Netflix manages payments through the app/website, never via external links in email",
+      "Copyright footer adds false legitimacy"
+    ]
+  },
+  {
+    "id": "CS-1036",
+    "customer_name": "Emma Richardson",
+    "channel": "Ticket",
+    "subject": "Monthly billing date change request",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Hi, my billing date is currently the 1st of each month but I recently changed jobs and now get paid on the 15th. Can you change my billing date to the 15th so it aligns with my payday? My account email is emma.r@gmail.com."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Emma, congratulations on the new job! Yes, I can absolutely change your billing date. Here's how it'll work:\n\n- Your current cycle runs September 1-30\n- I'll prorate the next charge: you'll pay for October 1-14 ($7.25) on October 1st\n- Starting October 15th, your regular charge of $14.99 will be billed on the 15th of each month\n\nShall I go ahead and make this change?"
+      },
+      {
+        "sender": "Customer",
+        "text": "That works perfectly. Please go ahead."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Done! Your billing date has been updated to the 15th of each month. A confirmation email has been sent to emma.r@gmail.com with the updated billing schedule. Your next charges will be:\n- October 1st: $7.25 (prorated)\n- October 15th: $14.99 (first full cycle on new date)\n\nAnything else I can help with?"
+      },
+      {
+        "sender": "Customer",
+        "text": "Nope, that's everything. Thanks for the quick change!"
+      }
+    ],
+    "expected_category": "Billing / Payment",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Satisfaction",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1037",
+    "customer_name": "WhatsApp Security",
+    "channel": "Email",
+    "subject": "⚠ WhatsApp: Someone Tried to Register Your Phone Number",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "WhatsApp Security Notification\n\nSomeone recently tried to register a WhatsApp account with your phone number (+1-XXX-XXX-4891).\n\nIf this was you, no action is needed.\n\nIf this was NOT you, your phone number may have been compromised. To secure your account and prevent unauthorized takeover, please verify your identity immediately:\n\nhttps://whatsapp-verify-number.example.net/secure?phone=4891&ref=WA-SEC-8812\n\nDuring verification:\n1. Enter the 6-digit SMS code you just received\n2. Provide your WhatsApp PIN (if 2-step verification is enabled)\n3. Confirm your linked email address\n\nWARNING: If someone successfully registers your number, you will LOSE ACCESS to all your WhatsApp chats, groups, media, and contacts permanently. This cannot be reversed.\n\nAct within 30 minutes before the registration attempt is finalized.\n\nWhatsApp Security Team\nMeta Platforms, Inc."
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "Critical",
+    "suspicious_indicators": [
+      "Phishing domain: whatsapp-verify-number.example.net — not an official WhatsApp/Meta domain",
+      "Requests SMS OTP code — this is the exact code needed to hijack the WhatsApp account",
+      "Requests WhatsApp 2-step verification PIN — giving this away enables complete account takeover",
+      "30-minute deadline creates extreme urgency",
+      "Threat of permanent chat and contact loss to trigger panic",
+      "WhatsApp never sends security verification links via email",
+      "Classic OTP interception / SIM swap social engineering attack"
+    ]
+  },
+  {
+    "id": "CS-1038",
+    "customer_name": "Victor Dmitriev",
+    "channel": "Live Chat",
+    "subject": "Can't update shipping address on pending order",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I placed order #ORD-81122 about an hour ago but I realized I used my old apartment address. I moved last month and forgot to update my default address. The order hasn't shipped yet — can you change the delivery address to 4417 Birch Lane, Apt 8C, Portland, OR 97201?"
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Victor! I checked and your order is still in 'Processing' status so we can definitely update the address before it ships. I've updated the shipping address to:\n\n4417 Birch Lane, Apt 8C\nPortland, OR 97201\n\nCan you confirm that's correct? I'll also update your default shipping address in your profile to prevent this in the future."
+      },
+      {
+        "sender": "Customer",
+        "text": "Yes, that's correct! Please update my default address too."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Both done! ✅ Your order #ORD-81122 will ship to the new address, and your profile default address has been updated. Estimated delivery remains September 21st. You'll receive a tracking email when it ships. Anything else?"
+      },
+      {
+        "sender": "Customer",
+        "text": "That's all, thank you for catching this in time!"
+      }
+    ],
+    "expected_category": "Delivery / Shipping",
+    "expected_sentiment": "Positive",
+    "expected_emotion": "Confusion",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  },
+  {
+    "id": "CS-1039",
+    "customer_name": "LinkedIn Talent Team",
+    "channel": "Email",
+    "subject": "Congratulations! You've Been Selected for a Senior Remote Position — $185K–$220K",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "Dear Professional,\n\nCongratulations! Based on your impressive LinkedIn profile, you have been shortlisted for a Senior Software Engineer (Remote) position at a Fortune 500 company.\n\nPosition Details:\n• Role: Senior Software Engineer (Fully Remote)\n• Salary: $185,000 – $220,000/year + equity\n• Start Date: October 2026\n• Benefits: Full health, 401k match, unlimited PTO\n\nTo proceed to the final interview stage, please complete your application profile and schedule your interview:\n\nhttps://linkedin-careers-apply.example.org/senior-role?ref=LI-HIRE-20260918\n\nYou will need to:\n1. Upload your updated resume (PDF format)\n2. Provide your current employment details and salary\n3. Complete a background authorization form (SSN required)\n4. Submit a copy of your government ID for identity verification\n\n⏰ This position will be filled within 72 hours. Complete your application before the opportunity is given to another candidate.\n\nWe look forward to having you on the team!\n\nSarah Chen\nSenior Talent Acquisition Partner\nLinkedIn Talent Solutions\n\nLinkedIn Corporation | Sunnyvale, CA"
+      }
+    ],
+    "expected_category": "Security",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Urgency",
+    "is_threat": true,
+    "threat_type": "Phishing / Social Engineering",
+    "risk_level": "High",
+    "suspicious_indicators": [
+      "Phishing domain: linkedin-careers-apply.example.org — not linkedin.com",
+      "Unsolicited job offer with unusually high salary to tempt victims",
+      "Requests SSN and government ID before any actual interview — identity theft risk",
+      "Requests current salary information — used for social engineering",
+      "72-hour deadline creates artificial scarcity",
+      "No specific company name mentioned despite claiming Fortune 500",
+      "LinkedIn never contacts candidates directly for third-party roles via external links",
+      "Too-good-to-be-true offer designed to bypass rational skepticism"
+    ]
+  },
+  {
+    "id": "CS-1040",
+    "customer_name": "Rachel Kim",
+    "channel": "Ticket",
+    "subject": "Unable to cancel — cancel button not working on website",
+    "messages": [
+      {
+        "sender": "Customer",
+        "text": "I've been trying to cancel my subscription for 3 days but the 'Cancel Subscription' button on the account settings page does nothing when I click it. No error, no confirmation, nothing happens. I've tried Chrome, Firefox, and Edge. I feel like this is a dark pattern to prevent cancellation. I want to cancel effective immediately and I expect a full refund for this month since I've been unable to cancel through normal means."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "Hi Rachel, I sincerely apologize for this experience. This is absolutely NOT intentional — we've identified a JavaScript bug on the cancellation page that affects certain account types. Our web team has been notified and a fix is being deployed.\n\nI've processed your cancellation immediately, effective today (September 18th). Here's what I've done:\n\n✅ Subscription cancelled — effective immediately\n✅ Full refund of $24.99 for September — processing in 3-5 business days\n✅ Access retained through September 30th (you won't lose anything early)\n✅ Bug report filed with engineering — ticket ENGR-4419\n\nI've also requested that our UX team audit the entire cancellation flow. You should never have difficulty ending your subscription. I'm truly sorry for the frustration."
+      },
+      {
+        "sender": "Customer",
+        "text": "I appreciate the transparency and quick resolution. The refund is fair. Hope you fix that bug soon — other people are probably hitting the same issue."
+      },
+      {
+        "sender": "Support Agent",
+        "text": "You're absolutely right, and we're prioritizing it. The fix should be live within 24 hours. Thank you for your patience and for reporting it — you've likely saved many other customers the same hassle. If you ever reconsider in the future, we'd love to have you back."
+      }
+    ],
+    "expected_category": "Billing / Subscription",
+    "expected_sentiment": "Negative",
+    "expected_emotion": "Anger",
+    "is_threat": false,
+    "threat_type": "None",
+    "risk_level": "Low",
+    "suspicious_indicators": []
+  }
+]

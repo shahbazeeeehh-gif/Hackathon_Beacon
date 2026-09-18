@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 40 280 370" fill="none">
+  <!-- Outer Shield -->
+  <polygon points="200,60 294,98 294,192 200,326 106,192 106,98" stroke="#111111" stroke-width="4.5" stroke-linejoin="round" />
+  
+  <!-- Viewfinder Target Corners -->
+  <path d="M 158 140 L 158 122 L 176 122" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 242 140 L 242 122 L 224 122" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 158 216 L 158 234 L 176 234" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 242 216 L 242 234 L 224 234" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Central Diamond -->
+  <polygon points="200,128 246,178 200,228 154,178" stroke="#111111" stroke-width="4" stroke-linejoin="round" />
+  
+  <!-- Horizontal Reticle Line -->
+  <line x1="156" y1="178" x2="244" y2="178" stroke="#111111" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Focal Beacon Red Dot -->
+  <circle cx="200" cy="178" r="10.5" fill="#E8482C" />
+
+  <!-- Typography B E A C O N -->
+  <text x="200" y="380" font-family="'Cinzel', 'Times New Roman', 'Baskerville', 'Playfair Display', serif" font-size="28" font-weight="600" letter-spacing="12" fill="#111111" text-anchor="middle">BEACON</text>
+</svg>
