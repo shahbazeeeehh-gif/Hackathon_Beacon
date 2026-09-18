@@ -18,8 +18,8 @@ except ModuleNotFoundError:
     from engine.threat_engine import ThreatEngine
 
 app = FastAPI(
-    title="Beacon - Customer Support Intelligence & Phishing Threat Detection",
-    description="Beacon Dual-Brain Platform combining Customer NLP Intelligence with Real-Time Cybersecurity Threat Defense",
+    title="SentinAI - Customer Support Intelligence & Phishing Threat Detection",
+    description="Dual-Brain Platform combining Customer NLP Intelligence with Real-Time Cybersecurity Threat Detection",
     version="1.0.0"
 )
 
@@ -130,7 +130,7 @@ DIST_PATH = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")
 def health_check():
     return {
         "status": "Online",
-        "system": "Beacon Dual-Brain Platform",
+        "system": "SentinAI Dual-Brain Platform",
         "endpoints": ["/api/kpis", "/api/tickets", "/api/tickets/{id}", "/api/analyze", "/api/upload"]
     }
 
@@ -214,7 +214,7 @@ def get_tickets(
     risk_level: Optional[str] = None,
     sentiment: Optional[str] = None,
     channel: Optional[str] = None,
-    unresolved_only: Optional[bool] = False
+    unresolved_only: Optional[bool] = False 
 ):
     results = TICKETS_CACHE
 
@@ -334,16 +334,3 @@ def reset_default_dataset():
     # Re-trigger load
     TICKETS_CACHE = load_and_process_tickets()
     return {"message": "Dataset reloaded", "total": len(TICKETS_CACHE)}
-
-@app.get("/api/download/csv")
-def download_csv():
-    csv_path = os.path.join(os.path.dirname(__file__), "data", "tickets.csv")
-    if os.path.exists(csv_path):
-        return FileResponse(csv_path, media_type="text/csv", filename="beacon_benchmark_tickets.csv")
-    raise HTTPException(status_code=404, detail="CSV file not found")
-
-@app.get("/api/download/json")
-def download_json():
-    if os.path.exists(DATA_PATH):
-        return FileResponse(DATA_PATH, media_type="application/json", filename="beacon_benchmark_tickets.json")
-    raise HTTPException(status_code=404, detail="JSON file not found")
